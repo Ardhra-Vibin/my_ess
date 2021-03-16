@@ -134,8 +134,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Container buildDot(int index, BuildContext context) {
     return Container(
       height: 15,
+
       width: currentIndex == index ? 15 : 15,
-      margin: EdgeInsets.only(right: 5),
+      margin: EdgeInsets.only(right: 20),
       decoration: BoxDecoration(
         border: Border.all(color: primary),
         borderRadius: BorderRadius.circular(20),

@@ -28,9 +28,19 @@ TextStyle f11sG = TextStyle(
   color: sG
 );
 BoxDecoration cont1 = BoxDecoration(
-    color: fG,
+    color: Colors.grey[100],
     borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(50),
-        topRight: Radius.circular(50)
+        topLeft: Radius.circular(40),
+        topRight: Radius.circular(40)
     )
 );
+InputDecoration inputText(String hintText){
+    return InputDecoration(
+        hintText: hintText,
+        hintStyle: f11sG,
+        fillColor: white,
+        filled: true,
+        border: InputBorder.none,
+        contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical: 8)
+    );
+}
