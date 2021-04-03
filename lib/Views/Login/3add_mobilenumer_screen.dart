@@ -34,7 +34,7 @@ class _AddNumberState extends State<AddNumber> {
     var width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomPadding: false,
 
       backgroundColor: primary,
       appBar: AppBar(

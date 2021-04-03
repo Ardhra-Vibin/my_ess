@@ -29,7 +29,7 @@ class _SignIn_ScreenState extends State<SignIn_Screen> {
     var width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomPadding: false,
       backgroundColor: primary,
       appBar: AppBar(
         backgroundColor: primary,

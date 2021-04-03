@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/asus/AndroidStudioProjects/flutter_ess_app/lib/Views/Gps/2gps_detect_location.dart';
 
 import '../widgets.dart';
 import '4gps_location_detect.dart';

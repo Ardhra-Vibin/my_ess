@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/asus/AndroidStudioProjects/flutter_ess_app/lib/Views/Gps/1gps_introduction.dart';
+import 'package:flutter_ess_app/Views/Gps/1gps_introduction.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../widgets.dart';
@@ -20,7 +20,7 @@ class _VerificationState extends State<Verification> {
 
     return Scaffold(
       backgroundColor: primary,
-      resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         backgroundColor: primary,
         elevation: 0,

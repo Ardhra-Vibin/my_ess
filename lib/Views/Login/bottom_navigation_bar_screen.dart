@@ -53,13 +53,15 @@ class _MyNavigationBarState extends State<MyNavigationBar > {
             topRight: Radius.circular(20.0),
           ),
           child: BottomNavigationBar(
+            showSelectedLabels: false,
+              showUnselectedLabels: false,
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home),
                     label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                    icon: Icon(MdiIcons.accountOutline),
+                    icon: Icon(Icons.account_circle_outlined),
                     label: 'Profile',
                 ),
                 BottomNavigationBarItem(
@@ -77,11 +79,11 @@ class _MyNavigationBarState extends State<MyNavigationBar > {
                   //backgroundColor: Colors.lightBlue,
                 ),
               ],
-              type: BottomNavigationBarType.shifting,
+              type: BottomNavigationBarType.fixed,
               currentIndex: _selectedIndex,
               selectedItemColor: primary,
-              unselectedItemColor: Colors.grey,
-              iconSize: 25,
+              unselectedItemColor: Colors.grey[400],
+              iconSize: 30,
               onTap: _onItemTap,
               elevation: 5
           ),

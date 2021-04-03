@@ -1,4 +1,7 @@
+
+
 import 'package:flutter/material.dart';
+import 'package:flutter_ess_app/Views/Chat/chat_room.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../widgets.dart';
@@ -80,43 +83,48 @@ class _ChatScreenState extends State<ChatScreen> {
                 itemCount: 10,
                   physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (context,index){
-                    return Padding(
-                      padding: const EdgeInsets.only(top: 7,right: 12,left: 12,bottom: 12),
-                      child: Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                height: 50,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color:primary
+                    return InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => ChatRoom()));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 7,right: 12,left: 12,bottom: 12),
+                        child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color:primary
+                                  ),
                                 ),
-                              ),
-                              SizedBox(width: 15,),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("Name Here"),
-                                  Text("Lorem infoprism")
-                                ],
-                              )
-                            ],
-                          ),
-                          Container(
-                            width: 25,
-                            height: 25,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color:primary
+                                SizedBox(width: 15,),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Name Here"),
+                                    Text("Lorem infoprism")
+                                  ],
+                                )
+                              ],
                             ),
-                            child: Center(child: Text("4",style: TextStyle(color: Colors.white),)),
-                          )
-                        ],
-                      ),
+                            Container(
+                              width: 25,
+                              height: 25,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color:primary
+                              ),
+                              child: Center(child: Text("4",style: TextStyle(color: Colors.white),)),
+                            )
+                          ],
+                        ),
+                        ),
                       ),
                     );
                   })),

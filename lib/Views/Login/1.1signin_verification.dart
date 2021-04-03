@@ -26,7 +26,7 @@ class _VerifyFromSignInState extends State<VerifyFromSignIn> {
     var width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        resizeToAvoidBottomPadding: false,
+        // resizeToAvoidBottomPadding: false,
         backgroundColor: primary,
         appBar: AppBar(
           backgroundColor: primary,

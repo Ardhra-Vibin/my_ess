@@ -51,6 +51,26 @@ TextStyle f15W = TextStyle(
   fontSize: 15,
   color: white
 );
+
+TextStyle f14W = TextStyle(
+    fontSize: 14,
+    color: white
+);
+
+TextStyle f14 = TextStyle(
+    fontSize: 14,
+);
+
+TextStyle f12 = TextStyle(
+  fontSize: 12,
+  color: Colors.grey[400]
+);
+
+TextStyle f14g = TextStyle(
+    fontSize: 14,
+    color: Colors.grey[500]
+);
+
 TextStyle f15sG = TextStyle(
   fontSize: 15,
     color: sG
