@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ess_app/Views/Home/home_page_introduction.dart';
+import 'file:///C:/Users/asus/AndroidStudioProjects/flutter_ess_app/lib/Views/Gps/1gps_introduction.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../widgets.dart';
@@ -20,30 +20,15 @@ class _VerificationState extends State<Verification> {
 
     return Scaffold(
       backgroundColor: primary,
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         backgroundColor: primary,
         elevation: 0,
-        actions: [
-          Row(
-            children: [
-              GestureDetector(
-                onTap: (){},
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Row(
-                    children: [
-                      Text("Back",style:f15W ,),
-                      Icon(Icons.arrow_forward_ios_sharp,color: white,size: 15,),
-                    ],
-                  ),
-                ),
-              )
-            ],
-          )
-        ],
+        title: Text("back"),
+        titleSpacing: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 8, right: 8),
+        padding: const EdgeInsets.only(left: 8, right: 8,bottom: 30,top: 10),
         child: Container(
           height: height,
           width: width,
@@ -53,7 +38,7 @@ class _VerificationState extends State<Verification> {
             child: Column(
               children: [
                 Text(
-                  "We sent you a verification code",
+                  "Enter the code",
                   style: f15tG,
                 ),
                 SizedBox(
@@ -74,7 +59,7 @@ class _VerificationState extends State<Verification> {
                       obscuringCharacter: "*",
                       animationType: AnimationType.fade,
                       pinTheme: PinTheme(
-                        selectedColor: Color(0xFF48c0d8),
+                        selectedColor: Color(0xFF005691),
                         selectedFillColor: Colors.transparent,
                         inactiveColor: Colors.black,disabledColor: Colors.black,
                         activeColor: Colors.grey,
@@ -114,8 +99,24 @@ class _VerificationState extends State<Verification> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                       side: BorderSide(color: primary)),
-                  child: Center(
-                    child: Text("Ccontinue"),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Text("")
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Next",style: f17P),
+                          SizedBox(width: 115,),
+                          Icon(Icons.arrow_forward,color: primary,)
+                        ],
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(

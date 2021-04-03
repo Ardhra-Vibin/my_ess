@@ -8,24 +8,21 @@ class UnbordingContent {
 
 List<UnbordingContent> contents = [
   UnbordingContent(
-      title: 'Quality Food',
-      image: 'assets/images/logo.jpg',
-      discription: "simply dummy text of the printing and typesetting  "
-          "industry's standard dummy text ever since the 1500s, "
+      title: 'Are you having trouble?',
+      image: 'assets/images/splash3.png',
+      discription: "We provide you with the various services you need and solve all the problems you face in a fast and high quality manner"
 
   ),
   UnbordingContent(
-      title: 'Fast Delevery',
-      image: 'assets/images/logo.jpg',
-      discription: "simply dummy text of the printing and  "
-          "industry's standard dummy text ever since the 1500s, "
+      title: 'Ess App',
+      image: 'assets/images/splash2.png',
+      discription: "Through our application, you can save time and fatigue by searching for workers close to you and communicating with them to solve any problem "
 
   ),
   UnbordingContent(
-      title: 'Reward surprises',
-      image: 'assets/images/logo.jpg',
-      discription: "simply dummy text of the printing and  "
-          "industry's standard dummy text ever since the 1500s, "
+      title: 'The best workers are waiting for you',
+      image: 'assets/images/splash1.png',
+      discription: "Through our application, you can save time and fatigue by searching for workers close to you and communicating with them to solve any problemess"
 
   ),
 ];

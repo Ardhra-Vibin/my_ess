@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_ess_app/Views/Login/contents.dart';
-import 'package:flutter_ess_app/Views/Login/signin_screen.dart';
+import 'package:flutter_ess_app/Views/Login/1signin_screen.dart';
+import 'package:flutter_ess_app/Views/localization/licalization_constants.dart';
 import 'package:flutter_ess_app/Views/widgets.dart';
 class SplashScreen extends StatefulWidget {
   @override
@@ -11,8 +13,31 @@ class _SplashScreenState extends State<SplashScreen> {
   int currentIndex = 0;
   PageController _controller;
 
+List  contents = [
+  {
+    "title": 'Are you having trouble?',
+    "image": 'assets/images/splash3.png',
+    "discription": "We provide you with the various services you need and solve all the problems you face in a fast and high quality manner"
+  },
+  {
+    "title": 'Ess App',
+    "image": 'assets/images/splash2.png',
+    "discription": "Through our application, you can save time and fatigue by searching for workers close"
+        " to you and communicating with them to solve any problem"
+  },
+  {
+    "title": 'The best works are waiting for you',
+    "image": 'assets/images/splash1.png',
+    "discription": "Through our application, you can save time and fatigue by searching for workers "
+        "close to you and communicating with them to solve any problem ess"
+  },
+  ];
+
   @override
   void initState() {
+    print("first page" + contents[0].toString());
+    print("second page" + contents[1].toString());
+    print("third page" + contents[2].toString());
     _controller = PageController(initialPage: 0);
     super.initState();
   }
@@ -22,7 +47,6 @@ class _SplashScreenState extends State<SplashScreen> {
     _controller.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,18 +55,22 @@ class _SplashScreenState extends State<SplashScreen> {
         backgroundColor: white,
         elevation: 0,
         actions: [
+          currentIndex != contents.length-1 ?
           GestureDetector(
-            onTap: (){},
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn_Screen()));
+            },
             child: Padding(
-              padding: const EdgeInsets.all(12.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [
-                  Text("Skip",style:f15sG ,),
-                   Icon(Icons.arrow_forward_ios_sharp,color: sG,size: 15,),
+                  Text(getTranslated(context, "Skip"),style:f15tG ,),
+                   SizedBox(width: 10,),
+                  Icon(Icons.arrow_forward,color: tG,size: 15,),
                 ],
               ),
             ),
-          )
+          ): Container()
         ],
       ),
       body: SafeArea(
@@ -56,28 +84,29 @@ class _SplashScreenState extends State<SplashScreen> {
                     setState(() {
                       currentIndex = index;
                     });
-                  },
+                    },
                   itemBuilder: (_, i){
                     return Padding(
-                      padding: const EdgeInsets.all(40.0),
+                      padding: const EdgeInsets.only(top: 40,right: 40,left: 40,bottom:33 ),
                       child: Column(
                         children: [
-                          Image.asset(contents[i].image,
+                          Image.asset(contents[i]["image"],
+                            //     title: Text(getTranslated(context, 'continue')),
                             height: 300,
                           ),
                           Text(
-                            contents[i].title,
+                            getTranslated(context, contents[i]["title"])
+                           ,textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 35,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           SizedBox(height: 20),
-                          Text(
-                            contents[i].discription,
+                          Text(getTranslated(context, contents[i]["discription"]),
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 14,
                               color: Colors.grey,
                             ),
                           )
@@ -98,15 +127,34 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 8,right: 8,top: 30,bottom: 8),
+              padding: const EdgeInsets.only(left: 8,right: 8,top: 20,bottom: 8),
               child: MaterialButton(
                 height: 45,
                 minWidth: MediaQuery.of(context).size.width-30,
-                child: Text(
-                    currentIndex == contents.length - 1 ? "Continue" : "Next"),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Text("")
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                            currentIndex == contents.length - 1 ? "Continue" : "Next",
+                          style: f17WB,
+                        ),
+                        SizedBox(width: 113,),
+                        Icon(Icons.arrow_forward,size: 25,)
+                      ],
+                    ),
+                  ],
+                ),
                 onPressed: () {
                   if (currentIndex == contents.length - 1) {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (_) => SignIn_Screen(),
@@ -134,9 +182,8 @@ class _SplashScreenState extends State<SplashScreen> {
   Container buildDot(int index, BuildContext context) {
     return Container(
       height: 15,
-
       width: currentIndex == index ? 15 : 15,
-      margin: EdgeInsets.only(right: 20),
+      margin: EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
         border: Border.all(color: primary),
         borderRadius: BorderRadius.circular(20),
