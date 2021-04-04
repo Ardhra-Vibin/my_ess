@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ess_app/Views/Chat/chat_room.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -41,10 +40,10 @@ class _ChatScreenState extends State<ChatScreen> {
                     bottomRight: Radius.circular(30),
                   )),
               child: Padding(
-                padding: const EdgeInsets.only(bottom:18.0,left: 40,right: 15),
+                padding: const EdgeInsets.only(bottom:18.0,left: 30,right: 15),
                 child: Row(
                   children: [
-                    Icon(MdiIcons.chatProcessingOutline),
+                    Image.asset("assets/images/chat.png",height: 25,),
                     SizedBox(width: 10,),
                     Text("Messages")
                   ],
@@ -62,9 +61,9 @@ class _ChatScreenState extends State<ChatScreen> {
                   padding: const EdgeInsets.all(15.0),
                   child: Row(
                     children: [
-                      Icon(Icons.search),
+                      Icon(Icons.search,color: sG,),
                       SizedBox(width: 10,),
-                      Text("Search")
+                      Text("Search",style: f15sG,)
                     ],
                   ),
                 ),
@@ -107,8 +106,8 @@ class _ChatScreenState extends State<ChatScreen> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text("Name Here"),
-                                    Text("Lorem infoprism")
+                                    Text("Name Here",style:f17tG,),
+                                    Text("Lorem infoprism",style: f15sG,)
                                   ],
                                 )
                               ],

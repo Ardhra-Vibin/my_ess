@@ -85,6 +85,8 @@ flutter:
     - lib/lang/ar.json
     - assets/images/Loading_2.gif
     - assets/images/radio-on-button.png
+    - assets/images/arrow_circle.png
+    - assets/images/chat.png
 
   #   - images/a_dot_ham.jpeg
 

@@ -299,7 +299,7 @@ class _SubCategoriesState extends State<SubCategories> {
 
                                                           ],
                                                         ),
-                                                        SizedBox(height: 20,),
+                                                        SizedBox(height: 35,),
 
                                                         MaterialButton(onPressed: (){
                                                           _pageController.nextPage(
@@ -316,25 +316,42 @@ class _SubCategoriesState extends State<SubCategories> {
                                                       ],
                                                     ),
                                                   ),)),//page2
-                                                  Center(child: Container(child: Column(
-                                                    crossAxisAlignment:CrossAxisAlignment.start,
-                                                    children: [
-                                                      Text("Past location",style: f15tG,),
-                                                      SizedBox(height: 20,),
-                                                      Text("New location",style: f15tG,),
-                                                      SizedBox(height: 20,),
-                                                      MaterialButton(onPressed: (){
-                                                        _pageController.nextPage(
-                                                          duration: Duration(milliseconds: 500),
-                                                          curve: Curves.ease,
-                                                        );
-                                                      },color:second,
-                                                        height: 45,
-                                                        minWidth: MediaQuery.of(context).size.width-30,
-                                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                                                        child: Text("Next",style: f17WB,),
-                                                      )
-                                                    ],
+                                                  Center(child: Container(
+                                                    height:400,
+                                                    child: Padding(
+                                                    padding: const EdgeInsets.only(right: 12,left: 12),
+                                                    child: Column(
+                                                      crossAxisAlignment:CrossAxisAlignment.start,
+                                                      children: [
+                                                        Text("Past location",style: f15tG,),
+                                                        SizedBox(height: 10,),
+                                                        TextField(
+                                                          style: f15,
+                                                          decoration: inputTextProfile("Location"),
+                                                        ),
+                                                        SizedBox(height: 10,),
+                                                        Text("New location",style: f15tG,),
+                                                        SizedBox(height: 10,),
+                                                        TextField(
+                                                          style: f15,
+                                                          decoration: inputTextProfile("Location"),
+                                                        ),
+                                                        SizedBox(height: 100,),
+                                                        MaterialButton(onPressed: (){
+                                                          _pageController.nextPage(
+                                                            duration: Duration(milliseconds: 500),
+                                                            curve: Curves.ease,
+                                                          );
+                                                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>))
+                                                        },
+                                                          color:second,
+                                                          height: 45,
+                                                          minWidth: MediaQuery.of(context).size.width-30,
+                                                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                                                          child: Text("Next",style: f17WB,),
+                                                        )
+                                                      ],
+                                                    ),
                                                   ),)),///page3
                                                 ],
                                               ),

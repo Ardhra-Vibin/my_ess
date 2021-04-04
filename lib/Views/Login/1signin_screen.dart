@@ -72,8 +72,7 @@ class _SignIn_ScreenState extends State<SignIn_Screen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(getTranslated(context, "Enter the email address and password")
-                    ,
+                  child: Text(getTranslated(context, "Enter the email address and password"),
                     style: f15tG,
                   ),
                 ),

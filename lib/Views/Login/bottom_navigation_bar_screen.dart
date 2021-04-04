@@ -5,6 +5,7 @@ import 'package:flutter_ess_app/Views/Categories/search3.dart';
 import 'package:flutter_ess_app/Views/Categories/sub_categories_screen.dart';
 import 'package:flutter_ess_app/Views/Chat/chat_screen.dart';
 import 'package:flutter_ess_app/Views/Profile/profile.dart';
+import 'package:flutter_ess_app/Views/WorkProgress/work_progress_screen.dart';
 import 'package:flutter_ess_app/Views/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -21,7 +22,7 @@ class _MyNavigationBarState extends State<MyNavigationBar > {
     //Search(),
     //SubCategories(),
     AddProfile(),
-    Text('Timing Screen', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    WorkProgress(),
     ChatScreen(),
     Text('Settings Screen', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];

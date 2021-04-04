@@ -18,7 +18,7 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        leading: Icon(Icons.arrow_forward,color: tG,),
+        iconTheme: IconThemeData(color: tG),
         backgroundColor: Colors.grey[100],
         elevation: 0,
       ),
@@ -127,7 +127,25 @@ class _SettingsState extends State<Settings> {
                       ],
                     ),
                   ),
-                )
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 8,right: 8,top: 280),
+                  child: MaterialButton(
+                    height: 45,
+                    minWidth: MediaQuery.of(context).size.width-30,
+                    color: primary,
+                    splashColor: second,
+                    colorBrightness: Brightness.light,
+                    onPressed: (){
+                      //Navigator.push(context, MaterialPageRoute(builder: (context) => MyNavigationBar()));
+                    },
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Text("Log out",style: f15W,),
+                  ),
+                ),
+
 
               ],
             ),

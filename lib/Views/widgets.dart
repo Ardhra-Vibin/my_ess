@@ -114,3 +114,22 @@ InputDecoration inputText(String hintText){
         )
     );
 }
+InputDecoration inputTextProfile(String hintText){
+  return InputDecoration(
+      hintText: hintText,
+      hintStyle: f11sG,
+      fillColor: Colors.grey[100],
+      filled: true,
+      border: InputBorder.none,
+      contentPadding: EdgeInsets.symmetric(horizontal: 12,vertical: 8),
+      enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: BorderSide(color: Colors.transparent)
+      ),
+      focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: BorderSide(color: Colors.transparent)
+      )
+  );
+}
+
