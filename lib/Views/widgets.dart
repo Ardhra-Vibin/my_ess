@@ -18,6 +18,13 @@ TextStyle f50WB = TextStyle(
   color: white,
   fontWeight: FontWeight.bold
 );
+TextStyle f25tG = TextStyle(
+    fontSize: 20,
+    color: tG,
+  fontWeight: FontWeight.w400
+);
+
+
 //added Bold
 TextStyle f17P = TextStyle(
   fontSize: 15,
@@ -47,6 +54,12 @@ TextStyle f15tG = TextStyle(
     fontSize: 15,
     color: tG
 );
+TextStyle f15tGB = TextStyle(
+    fontSize: 15,
+    color: tG,
+    fontWeight: FontWeight.bold
+);
+
 TextStyle f15W = TextStyle(
   fontSize: 15,
   color: white

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ess_app/Views/WorkProgress/pricing_terms_screen.dart';
 
 import '../widgets.dart';
 class CheckWorkProgress extends StatefulWidget {
@@ -41,8 +42,15 @@ class _CheckWorkProgressState extends State<CheckWorkProgress> {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Text("The worker not yet started",style:f15tG,),
+            ),
+            MaterialButton(
+              color: primary,
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PricingTerms()));
+              },
             )
-            ],
+            ]
+
         ),
       ),
     );
