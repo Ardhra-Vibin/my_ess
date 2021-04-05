@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_ess_app/Views/WorkProgress/work_detail_screen3.dart';
 
 import '../widgets.dart';
 class CheckWorkProgress extends StatefulWidget {
@@ -10,6 +13,27 @@ class CheckWorkProgress extends StatefulWidget {
 }
 
 class _CheckWorkProgressState extends State<CheckWorkProgress> {
+
+  bool showw;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setState(() {
+      showw = false;
+    });
+    _timer();
+  }
+
+  _timer()async {
+    Timer(Duration(seconds: 3),(){
+      setState(() {
+        showw=true;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -33,15 +57,20 @@ class _CheckWorkProgressState extends State<CheckWorkProgress> {
               child: Container(
                 height: 200,
                 width: w,
-                child:Image.asset(widget.img,fit: BoxFit.fill,),
+                child:Image.asset(widget.img,fit: BoxFit.cover,),
               ),
             ),
-            SizedBox(height: 100,),
-            Icon(Icons.add_alert,color: tG,size: 80,),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Text("The worker not yet started",style:f15tG,),
-            )
+            showw == false?   Column(
+              children: [
+                SizedBox(height: h/5,),
+                Image.asset("assets/icons/bell.png",height: 70,),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: Text("The worker has not yet started",style:f17tG,),
+                )
+              ],
+            ) : PricingTerms(),
+
             ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ess_app/Views/Categories/notification_screen.dart';
+import 'package:flutter_ess_app/Views/WorkProgress/work_detail_screen1.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../widgets.dart';
@@ -15,9 +16,9 @@ class _WorkProgressState extends State<WorkProgress> {
 
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
-
     return Scaffold(
       backgroundColor: primary,
+
       body: Column(
         children: [
           Padding(
@@ -133,7 +134,7 @@ class _WorkProgressState extends State<WorkProgress> {
                       padding: const EdgeInsets.only(top: 10),
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckWorkProgress(img:"assets/images/GOPR2792.JPG")));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckWorkScreen1(img:"assets/images/GOPR2792.JPG")));
                         },
                         child: Container(
                           decoration: BoxDecoration(
