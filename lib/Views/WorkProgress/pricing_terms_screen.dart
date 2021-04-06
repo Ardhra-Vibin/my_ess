@@ -6,12 +6,12 @@ import '../widgets.dart';
 import '../widgets.dart';
 import '../widgets.dart';
 
-class PricingTerms extends StatefulWidget {
+class PricingTermsScreen extends StatefulWidget {
   @override
-  _PricingTermsState createState() => _PricingTermsState();
+  _PricingTermsScreenState createState() => _PricingTermsScreenState();
 }
 
-class _PricingTermsState extends State<PricingTerms> {
+class _PricingTermsScreenState extends State<PricingTermsScreen> {
   @override
   Widget build(BuildContext context) {
 

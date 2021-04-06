@@ -27,11 +27,13 @@ class _SubCategoriesState extends State<SubCategories> {
 
 
   int radioId;
+  bool backGround;
 
   void initState(){
     super.initState();
     setState(() {
       radioId = 2;
+      backGround = false;
     });
   }
 
@@ -78,14 +80,14 @@ class _SubCategoriesState extends State<SubCategories> {
           color: Colors.black38
         ),
       ),
-      body: SafeArea(
+      body:SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 12,right: 12,top: 15,bottom: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                 Row(
                   children: [
                     Icon(MdiIcons.buffer,color: tG,),
                     SizedBox(width: 10,),
@@ -204,6 +206,16 @@ class _SubCategoriesState extends State<SubCategories> {
                                                       Text("You Select",style: f17tG,),
                                                       SizedBox(height: 20,),
                                                       Container(
+                                                        decoration: BoxDecoration(
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                              color: Colors.grey.withOpacity(0.5),
+                                                              spreadRadius: 1,
+                                                              blurRadius: 10,
+                                                              offset: Offset(0, 3), // changes position of shadow
+                                                            ),
+                                                          ],
+                                                        ),
                                                         child: Card(
                                                           child: Column(
                                                             children: [
@@ -217,7 +229,10 @@ class _SubCategoriesState extends State<SubCategories> {
                                                                   ),
                                                                 ),
                                                               ),
-                                                              Text(subCategories[index]["name"],),
+                                                              Padding(
+                                                                padding: const EdgeInsets.all(8.0),
+                                                                child: Text(subCategories[index]["name"],),
+                                                              ),
                                                             ],
                                                           ),
                                                         ),
@@ -256,7 +271,7 @@ class _SubCategoriesState extends State<SubCategories> {
                                                           child: Row(
                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                             children: [
-                                                              Text("Right Now"),
+                                                              Text("Right Now",style: f14bB,),
                                                               Icon(MdiIcons.radioboxMarked,color: radioId==1?second:fG,size: radioId==1?27:19,)
                                                             ],
                                                           ),
@@ -274,7 +289,7 @@ class _SubCategoriesState extends State<SubCategories> {
                                                           child: Row(
                                                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                             children: [
-                                                              Text("Select another day"),
+                                                              Text("Select another day",style: f14bB,),
                                                               Icon(MdiIcons.radioboxMarked,color: radioId==2?second:fG,size: radioId==2?27:19,)
                                                             ],
                                                           ),
@@ -302,6 +317,9 @@ class _SubCategoriesState extends State<SubCategories> {
                                                         SizedBox(height: 35,),
 
                                                         MaterialButton(onPressed: (){
+                                                          setState(() {
+                                                            backGround = true;
+                                                          });
                                                           _pageController.nextPage(
                                                             duration: Duration(milliseconds: 500),
                                                             curve: Curves.ease,
@@ -326,7 +344,7 @@ class _SubCategoriesState extends State<SubCategories> {
                                                         Text("Past location",style: f15tG,),
                                                         SizedBox(height: 10,),
                                                         TextField(
-                                                          style: f15,
+                                                          style: f14bB,
                                                           decoration: inputTextProfile("Location"),
                                                         ),
                                                         SizedBox(height: 10,),

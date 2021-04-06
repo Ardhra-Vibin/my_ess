@@ -48,7 +48,7 @@ class _Category_ScreenState extends State<Category_Screen> {
               Stack(
                 children: [
                   Container(
-                    height: h / 5,
+                    height: h / 4.7,
                     width: w,
                     decoration: BoxDecoration(
                         color: primary,
@@ -228,7 +228,7 @@ class _Category_ScreenState extends State<Category_Screen> {
                     Padding(
                       padding: const EdgeInsets.only(right: 12,left: 12),
                       child: Container(
-                        height: 400,
+                        height: h/1.5,
                         child: searchResult.length >0?GridView.builder(
                             gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,

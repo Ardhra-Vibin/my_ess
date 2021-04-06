@@ -85,7 +85,7 @@ class _VerificationState extends State<Verification> {
                   ),
                 ),
                 SizedBox(
-                  height: 220,
+                  height: 180,
                 ),
                 MaterialButton(
                   onPressed: () {

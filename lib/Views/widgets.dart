@@ -32,6 +32,14 @@ TextStyle f17P = TextStyle(
     fontWeight: FontWeight.bold
 
 );
+
+TextStyle f18WB = TextStyle(
+    fontSize: 17,
+    color: Colors.white,
+    fontWeight: FontWeight.bold
+);
+
+
 TextStyle f17WB = TextStyle(
   fontSize: 15,
   color: Colors.white,
@@ -41,6 +49,15 @@ TextStyle f17tG = TextStyle(
   fontSize: 17,
   color: tG,
 );
+TextStyle f21tG = TextStyle(
+  fontSize: 21,
+  color: tG,
+);
+
+TextStyle fappbar = TextStyle(
+  color: tG,
+);
+
 
 TextStyle f15 = TextStyle(
     fontSize: 15,
@@ -50,16 +67,26 @@ TextStyle f15B = TextStyle(
     fontWeight: FontWeight.bold
 );
 
+TextStyle f15BB = TextStyle(
+    fontSize: 15,
+    color: primary,
+    fontWeight: FontWeight.bold
+);
+
 TextStyle f15tG = TextStyle(
     fontSize: 15,
     color: tG
 );
+TextStyle f15sG = TextStyle(
+    fontSize: 15,
+    color: sG
+);
+
 TextStyle f15tGB = TextStyle(
     fontSize: 15,
     color: tG,
     fontWeight: FontWeight.bold
 );
-
 TextStyle f15W = TextStyle(
   fontSize: 15,
   color: white
@@ -74,6 +101,17 @@ TextStyle f14 = TextStyle(
     fontSize: 14,
 );
 
+TextStyle f14wB = TextStyle(
+  fontSize: 14,
+    color: white,
+  fontWeight: FontWeight.w500
+);
+TextStyle f14bB = TextStyle(
+    fontSize: 14,
+    color: Colors.black,
+    fontWeight: FontWeight.w500
+);
+
 TextStyle f12 = TextStyle(
   fontSize: 12,
   color: Colors.grey[400]
@@ -84,10 +122,6 @@ TextStyle f14g = TextStyle(
     color: Colors.grey[500]
 );
 
-TextStyle f15sG = TextStyle(
-  fontSize: 15,
-    color: sG
-);
 TextStyle f12tGw500 = TextStyle(
     fontSize: 12,
     color: tG,
