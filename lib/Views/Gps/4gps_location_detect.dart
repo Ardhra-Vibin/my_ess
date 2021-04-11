@@ -42,7 +42,7 @@ class _LocationDetectState extends State<LocationDetect> {
                       },
                       child: Row(
                         children: [
-                          Icon(Icons.arrow_back_ios_rounded,color: Colors.black,size: 20,),
+                          Icon(Icons.arrow_back_ios,color: Colors.black,size: 20,),
                           Text("back",style: TextStyle(color:Colors.black),)
                         ],
                       ),

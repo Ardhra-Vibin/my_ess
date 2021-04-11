@@ -74,7 +74,7 @@ class _WorkProgressState extends State<WorkProgress> {
                         Row(
                           children: [
                             Icon(
-                              Icons.location_on_outlined,
+                              Icons.location_on,
                               color: white,
                               size: 12,
                             ),
@@ -119,7 +119,7 @@ class _WorkProgressState extends State<WorkProgress> {
                 )
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 12,right: 12,bottom: 20,top: 20),
+                padding: const EdgeInsets.only(left: 12,right: 12,bottom: 20,top: 30),
                 child: Column(
                   children: [
                     Row(
@@ -137,38 +137,33 @@ class _WorkProgressState extends State<WorkProgress> {
                         },
                         child: Container(
                           decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey[100],
-                                    blurRadius: 2,
-                                    spreadRadius: 2
-                                )
-                              ]
+                              color: white,
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [BoxShadow(color: Colors.grey[300],
+                                  spreadRadius: 1,blurRadius: 5),]
                           ),
-                          child: Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius:BorderRadius.circular(10),
-                                          child: Container(
-                                            height: 63,
-                                            width: 90,
-                                            child: Image.asset("assets/image/flatpaintchair.png",fit: BoxFit.fill,),
-                                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Container(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius:BorderRadius.circular(10),
+                                        child: Container(
+                                          height: 63,
+                                          width: 90,
+                                          child: Image.asset("assets/image/flatpaintchair.png",fit: BoxFit.fill,),
                                         ),
-                                        SizedBox(width: 10,),
-                                        Text("Flat Paint",style: f15tG,)
-                                      ],
-                                    ),
-                                    Image.asset("assets/images/arrow_circle.png",height: 27,color: primary,)
-                                  ],
-                                ),
+                                      ),
+                                      SizedBox(width: 10,),
+                                      Text("Flat Paint",style: f15tG,)
+                                    ],
+                                  ),
+                                  Image.asset("assets/images/arrow_circle.png",height: 27,color: primary,)
+                                ],
                               ),
                             ),
                           ),

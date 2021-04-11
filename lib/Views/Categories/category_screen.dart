@@ -111,7 +111,7 @@ class _Category_ScreenState extends State<Category_Screen> {
                                 Row(
                                   children: [
                                     Icon(
-                                      Icons.location_on_outlined,
+                                      Icons.location_on,
                                       color: white,
                                       size: 12,
                                     ),

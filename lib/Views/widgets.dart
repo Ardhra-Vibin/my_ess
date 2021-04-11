@@ -39,6 +39,12 @@ TextStyle f18WB = TextStyle(
     fontWeight: FontWeight.bold
 );
 
+TextStyle f19B = TextStyle(
+    fontSize: 19,
+    color: Colors.black,
+    fontWeight: FontWeight.w500
+);
+
 
 TextStyle f17WB = TextStyle(
   fontSize: 15,
@@ -48,6 +54,11 @@ TextStyle f17WB = TextStyle(
 TextStyle f17tG = TextStyle(
   fontSize: 17,
   color: tG,
+);
+
+TextStyle f17G = TextStyle(
+  fontSize: 17,
+  color: Colors.grey,
 );
 TextStyle f21tG = TextStyle(
   fontSize: 21,

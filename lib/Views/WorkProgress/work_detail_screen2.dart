@@ -2,8 +2,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ess_app/Views/WorkProgress/check_work_progress.dart';
+import 'package:flutter_ess_app/Views/WorkProgress/work_detail_screen3.dart';
 import 'package:flutter_ess_app/Views/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 //import 'package:url_launcher/url_launcher.dart';
 
 class WorkDetailsScreen2 extends StatefulWidget {
@@ -83,7 +85,7 @@ class _WorkDetailsScreen2State extends State<WorkDetailsScreen2> {
                               ),
                             ),
                             MaterialButton(onPressed: (){
-                             // launch("tel:+1 232 2323 23");
+                             launch("tel:+1 232 2323 23");
                             },minWidth: w/2.3,
                               color: primary,
                               shape: RoundedRectangleBorder(
@@ -102,9 +104,9 @@ class _WorkDetailsScreen2State extends State<WorkDetailsScreen2> {
                         ),
                         SizedBox(height: 28,),
                         Center(child: Text("If he arrived at the site, press the next button")),
-                        SizedBox(height: 25,),
+                        SizedBox(height: 50,),
                         MaterialButton(onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => CheckWorkProgress(img:"assets/images/GOPR2792.JPG",)));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => PricingTerms()));
                         },minWidth: w/2.3,height: 50,
                           color: Color(0xFF05E8B2),
                           shape: RoundedRectangleBorder(

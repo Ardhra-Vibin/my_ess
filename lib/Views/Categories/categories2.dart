@@ -106,7 +106,7 @@ class _CheckCategoryState extends State<CheckCategory> {
                                 children: [
                                   Row(
                                     children: [
-                                      Icon(Icons.person_outlined,color: Colors.white70,size: 12,),
+                                      Icon(Icons.person_outline,color: Colors.white70,size: 12,),
                                       SizedBox(width: 5,),
                                       SizedBox(height: 5,),
                                       Text("Name Here",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.white),)
@@ -115,7 +115,7 @@ class _CheckCategoryState extends State<CheckCategory> {
                                   SizedBox(width: 5,),
                                   Row(
                                     children: [
-                                      Icon(Icons.location_on_outlined,color: Colors.white70,size: 12,),
+                                      Icon(Icons.location_on,color: Colors.white70,size: 12,),
                                       SizedBox(width: 5,),
                                       SizedBox(height: 5,),
                                       Text("location is here,the city",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10,color: Colors.white))

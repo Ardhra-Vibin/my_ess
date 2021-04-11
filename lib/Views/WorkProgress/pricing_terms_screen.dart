@@ -107,7 +107,7 @@ class _PricingTermsScreenState extends State<PricingTermsScreen> {
                         color: fG,
                       ),
                       Text("0:23",style: f17tG,),
-                      Icon(Icons.access_time_rounded,color: Colors.redAccent[100],),
+                      Icon(Icons.access_time,color: Colors.redAccent[100],),
                     ],
                   ),
                 ),

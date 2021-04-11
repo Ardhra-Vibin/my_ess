@@ -49,13 +49,13 @@ class _SearchState extends State<Search> {
                           children: [
                             Row(
                               children: [
-                                Icon(Icons.person_outlined,size: 20,),
+                                Icon(Icons.person_outline,size: 20,),
                                 Text("Person")
                               ],
                             ),
                             Row(
                               children: [
-                                Icon(Icons.person_outlined,size: 20,),
+                                Icon(Icons.person_outline,size: 20,),
                                 Text("location is here,the city")
                               ],
                             ),
@@ -65,7 +65,7 @@ class _SearchState extends State<Search> {
                     ),
                     Row(
                       children: [
-                        Icon(Icons.person_outlined,size: 20,),
+                        Icon(Icons.person_outline,size: 20,),
                       ],
                     ),
                   ],

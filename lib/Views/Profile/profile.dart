@@ -83,7 +83,7 @@ class _AddProfileState extends State<AddProfile> {
                                   ),
                                   Row(
                                     children: [
-                                      Icon(Icons.phone_in_talk_rounded,size: 12,color: sG,),
+                                      Icon(Icons.phone_in_talk,size: 12,color: sG,),
                                       SizedBox(width: 5,),
                                       Text("+123 123456789",style: f11sG)
                                     ],

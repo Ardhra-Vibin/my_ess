@@ -33,15 +33,16 @@ class _CheckWorkScreen1State extends State<CheckWorkScreen1> {
         padding: const EdgeInsets.only(right: 12,left: 12,top: 5),
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius:BorderRadius.circular(12),
-              child: Container(
-                height: 200,
-                width: w,
-                child:Image.asset(widget.img,fit: BoxFit.fill,),
+            Container(
+              height:200,
+              width: w,
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10)
               ),
+              child: Image.asset("assets/image/flatpaintchair.png",fit: BoxFit.cover,),
             ),
-            SizedBox(height: 20,),
+            SizedBox(height: 10,),
             GestureDetector(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => WorkDetailsScreen2()));

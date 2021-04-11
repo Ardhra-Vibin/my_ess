@@ -5,6 +5,7 @@ import 'package:flutter_ess_app/Views/Categories/search3.dart';
 import 'package:flutter_ess_app/Views/Categories/sub_categories_screen.dart';
 import 'package:flutter_ess_app/Views/Chat/chat_screen.dart';
 import 'package:flutter_ess_app/Views/Profile/profile.dart';
+import 'package:flutter_ess_app/Views/Search/search_screen.dart';
 import 'package:flutter_ess_app/Views/WorkProgress/work_progress_screen.dart';
 import 'package:flutter_ess_app/Views/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -24,7 +25,8 @@ class _MyNavigationBarState extends State<MyNavigationBar > {
     AddProfile(),
     WorkProgress(),
     ChatScreen(),
-    Text('Settings Screen', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    SearchScreen()
+    // Text('Settings Screen', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];
   void _onItemTap(int index) {
     setState(() {
@@ -59,24 +61,24 @@ class _MyNavigationBarState extends State<MyNavigationBar > {
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                     icon: Icon(Icons.home),
-                    label: 'Home',
+                    title: Text('Home'),
                 ),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.account_circle_outlined),
-                    label: 'Profile',
+                    icon: Icon(Icons.person_outline),
+                    title: Text('Profile'),
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.access_time_rounded),
-                  label: 'Timing',
+                  icon: Icon(Icons.access_time),
+                  title: Text( 'Timing'),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(MdiIcons.chatProcessingOutline),
-                  label: 'Messenger',
+                  title: Text('Messenger'),
                   //backgroundColor: Colors.lightBlue,
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(MdiIcons.cogOutline),
-                  label: 'Settings',
+                  title: Text('Settings'),
                   //backgroundColor: Colors.lightBlue,
                 ),
               ],

@@ -36,6 +36,7 @@ dependencies:
   scrollable_positioned_list: ^0.1.10
   dropdown_date_picker: ^0.1.1+2
   intl:
+  url_launcher:
 
 
 
@@ -62,6 +63,7 @@ flutter:
     - assets/images/g_map.png
     - assets/images/india.png
     - assets/images/uae.png
+    - assets/image/search.png
     - assets/images/america.png
     - assets/images/esslogo.png
     - assets/images/splash1.png
