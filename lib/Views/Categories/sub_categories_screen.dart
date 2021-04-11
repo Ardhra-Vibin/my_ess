@@ -1,6 +1,7 @@
 import 'package:dropdown_date_picker/dropdown_date_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ess_app/Views/Chat/chat_screen.dart';
 import 'package:flutter_ess_app/Views/widgets.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -360,7 +361,8 @@ class _SubCategoriesState extends State<SubCategories> {
                                                             duration: Duration(milliseconds: 500),
                                                             curve: Curves.ease,
                                                           );
-                                                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>))
+                                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatScreen(),
+                                                          ));
                                                         },
                                                           color:second,
                                                           height: 45,

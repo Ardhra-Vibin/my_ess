@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ess_app/Views/payment/paymentmethod_screen.dart';
 
 import '../widgets.dart';
 import '../widgets.dart';
@@ -24,7 +25,8 @@ class _PricingTermsScreenState extends State<PricingTermsScreen> {
         backgroundColor: white,
         elevation: 0,
         iconTheme: IconThemeData(color: tG),
-        title: Text("Flat Paint"),
+        titleSpacing: 0,
+        title: Text("Flat Paint",style: f17tG,),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -121,7 +123,7 @@ class _PricingTermsScreenState extends State<PricingTermsScreen> {
                   splashColor: second,
                   colorBrightness: Brightness.light,
                   onPressed: (){
-                    //Navigator.push(context, MaterialPageRoute(builder: (context) => MyNavigationBar()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentMethod()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
