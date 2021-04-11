@@ -90,6 +90,13 @@ flutter:
     - assets/images/radio-on-button.png
     - assets/images/arrow_circle.png
     - assets/images/chat.png
+    - assets/image/flatpaintchair.png
+    - assets/image/add_circle.png
+    - assets/image/Visa.png
+    - assets/image/paymentred.png
+    - assets/image/apple.png
+    - assets/image/visa_text.jpeg
+    - assets/image/samsung_pay.png
 
   #   - images/a_dot_ham.jpeg
 

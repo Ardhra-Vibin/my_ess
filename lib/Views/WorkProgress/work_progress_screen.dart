@@ -18,7 +18,6 @@ class _WorkProgressState extends State<WorkProgress> {
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: primary,
-
       body: Column(
         children: [
           Padding(
@@ -134,7 +133,7 @@ class _WorkProgressState extends State<WorkProgress> {
                       padding: const EdgeInsets.only(top: 10),
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckWorkScreen1(img:"assets/images/GOPR2792.JPG")));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>CheckWorkScreen1(img:"assets/image/flatpaintchair.png")));
                         },
                         child: Container(
                           decoration: BoxDecoration(
@@ -160,7 +159,7 @@ class _WorkProgressState extends State<WorkProgress> {
                                           child: Container(
                                             height: 63,
                                             width: 90,
-                                            child: Image.asset("assets/images/GOPR2792.JPG",fit: BoxFit.fill,),
+                                            child: Image.asset("assets/image/flatpaintchair.png",fit: BoxFit.fill,),
                                           ),
                                         ),
                                         SizedBox(width: 10,),
